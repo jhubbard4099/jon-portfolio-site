@@ -17,16 +17,21 @@
 
 /* TODO: Max size of card */
 body {
-  /* min-height: 100vh; */
+  display: flex;
+  
+  flex-direction: column;
+  min-height: 100vh;
+
   font-family: 'Courier New', Courier, monospace;
   background-color: rgb(221, 255, 198);
-  margin: 100px;
-
-  display: flex;
-  flex-direction: column;
 }
 
 #card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 100px;
+
   background-color: antiquewhite;
   border-style: solid;
   border-color: rgb(192, 174, 140);
@@ -34,38 +39,41 @@ body {
 
 #content {
   display: flex;
-  flex: 1;
   flex-direction: column;
   padding: 16px;
   gap: 10px;
 }
 
-#header, #footer, #quick-links {
+#navigation {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 8px;
-}
+  justify-content: flex-start;
+  padding: 5px;
+  gap: 20px;
 
-#header {
   border-bottom: solid;
   border-color: rgb(192, 174, 140);
 }
 
+#header, #footer {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.24);
+}
+
+#header {
+  justify-content: space-between;
+}
+
 #footer {
-  border-top: solid;
-  border-color: rgb(192, 174, 140);
+  justify-content: center;
 }
 
-#title {
+#quick-links {
   display: flex;
-  align-items: center;
-}
-
-#navigation {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 5px
 }
 
 
@@ -73,14 +81,10 @@ body {
 /*  Misc Rules  */
 /* ------------ */
 
-a {
-  color: blue;
-}
-
 ul {
   list-style-type: none;
 }
 
-/* a {
+a {
   text-decoration: none;
-} */
+}
