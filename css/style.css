@@ -8,23 +8,64 @@
   box-sizing: border-box;
 }
 
-* {border:1px solid red}
+/* * {border:1px solid red} */
 
 
 /* ------------ */
 /*  Main Rules  */
 /* ------------ */
 
+/* TODO: Max size of card */
 body {
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(221, 255, 198);
+  margin: 100px;
 
   display: flex;
   flex-direction: column;
 }
 
-.header, .footer {
+#card {
+  background-color: antiquewhite;
+  border-style: solid;
+  border-color: rgb(192, 174, 140);
+}
+
+#content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 16px;
+  gap: 10px;
+}
+
+#header, #footer, #quick-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+}
+
+#header {
+  border-bottom: solid;
+  border-color: rgb(192, 174, 140);
+}
+
+#footer {
+  border-top: solid;
+  border-color: rgb(192, 174, 140);
+}
+
+#title {
   display: flex;
   align-items: center;
+}
+
+#navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 
@@ -32,10 +73,14 @@ body {
 /*  Misc Rules  */
 /* ------------ */
 
+a {
+  color: blue;
+}
+
 ul {
   list-style-type: none;
 }
 
-a {
+/* a {
   text-decoration: none;
-}
+} */
