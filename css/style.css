@@ -8,6 +8,8 @@
   box-sizing: border-box;
 }
 
+/* TODO: Add scroll rules for some divs */
+
 /* * {border:1px solid red} */
 
 
@@ -31,6 +33,10 @@ body {
   flex: 1;
   flex-direction: column;
   margin: 100px;
+  
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
 
   background-color: antiquewhite;
   border-style: solid;
@@ -77,6 +83,62 @@ body {
 }
 
 
+/* --------------- */
+/*  Project Rules  */
+/* --------------- */
+
+#project-content {
+  display: flex;
+  padding: 16px;
+  gap: 10px;
+}
+
+#project-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 200px;
+}
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project {
+  width: 350px;
+  height: 200px;
+  text-align: center;
+  align-content: center;
+
+  background-color: aqua;
+  border-color: blue;
+  border-style: solid;
+
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition: transform .2s;
+}
+
+.project:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: transform .2s;
+
+  filter: drop-shadow(0px 0px 5px #00000075);
+  filter: brightness(110%);
+  cursor: pointer;
+}
+
+#project-overlay {
+  background-color: #00000075;
+  position: fixed;
+  z-index: 999;
+}
+
+
 /* ------------ */
 /*  Misc Rules  */
 /* ------------ */
@@ -87,4 +149,8 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }

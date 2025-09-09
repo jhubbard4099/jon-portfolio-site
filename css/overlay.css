@@ -1,0 +1,53 @@
+/* ----------------- */
+/*  Universal Rules  */
+/* ----------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {border:1px solid pink}
+
+
+/* ------------ */
+/*  Main Rules  */
+/* ------------ */
+
+/* TODO: Max size of card */
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+#content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 100px;
+
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px;
+
+  background-color: antiquewhite;
+  border-style: solid;
+  border-color: rgb(192, 174, 140);
+}
+
+
+/* ------------ */
+/*  Misc Rules  */
+/* ------------ */
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}

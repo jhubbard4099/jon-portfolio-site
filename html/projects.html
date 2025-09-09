@@ -7,12 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Jonathan's Portfolio</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="js/javascript.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/javascript.js" defer></script>
   </head>
 
+  <!-- <iframe 
+        id="project-overlay"
+        src="overlay.html"
+        height="100%"
+        width="100%"
+        name="overlay"
+        allowTransparency="true"
+        scrolling="no"
+        frameborder="0"
+    >
+    </iframe> -->
+
   <body>
-    <!-- <object type="text/html" data="html/header.html" style="overflow:auto; width: 100%; height: 120px;"></object> -->
     <div id="header">
       <h1>Jonathan Hubbard</h1>
       <div id="quick-links">
@@ -24,15 +35,42 @@
     <div id="card">
 
       <div id="navigation">
-        <a href="../index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+        <a href="/index.html">Home</a>
+        <a href="/html/about.html">About</a>
+        <a href="/html/projects.html">Projects</a>
+        <a href="/html/contact.html">Contact</a>
       </div>
 
-      <div id="content">
+      <div id="project-content">
 
-        
+        <div id="project-navigation">
+          <button>All</button>
+          <button>Hardware</button>
+          <button>Software</button>
+          <button>Web Dev</button>
+          <button>Game Dev</button>
+        </div>
+
+        <div id="projects">
+          <div id="project-car" class="project hardware software">
+            Autonomous NXP Car
+          </div>
+          <div id="project-record" class="project web-dev software">
+            Record Picker Website
+          </div>
+          <div id="project-vending" class="project hardware software">
+            Vending Machine Simulator
+          </div>
+          <div id="project-checkers" class="project web-dev game-dev software">
+            WebCheckers
+          </div>
+          <div id="project-button" class="project hardware software">
+            KL46 Button Game
+          </div>
+          <div id="project-portfolio" class="project web-dev software">
+            Portfolio Website
+          </div>
+        </div>
 
       </div>
       
