@@ -9,19 +9,10 @@
     <title>Jonathan's Portfolio</title>
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/javascript.js" defer></script>
+    <script src="/js/projects.js" defer></script>
   </head>
 
-  <!-- <iframe 
-        id="project-overlay"
-        src="overlay.html"
-        height="100%"
-        width="100%"
-        name="overlay"
-        allowTransparency="true"
-        scrolling="no"
-        frameborder="0"
-    >
-    </iframe> -->
+  <!-- TODO: Add ability to search major skills -->
 
   <body>
     <div id="header">
@@ -36,19 +27,19 @@
 
       <div id="navigation">
         <a href="/index.html">Home</a>
-        <a href="/html/about.html">About</a>
+        <a href="/html/experience.html">Experience</a>
         <a href="/html/projects.html">Projects</a>
-        <a href="/html/contact.html">Contact</a>
+        <a href="/html/about.html">About</a>
       </div>
 
       <div id="project-content">
 
         <div id="project-navigation">
-          <button>All</button>
-          <button>Hardware</button>
-          <button>Software</button>
-          <button>Web Dev</button>
-          <button>Game Dev</button>
+          <button id="button-all" class="rotatable">All</button>
+          <button id="button-hardware" class="rotatable">Hardware</button>
+          <button id="button-software" class="rotatable">Software</button>
+          <button id="button-web" class="rotatable">Web Dev</button>
+          <button id="button-game" class="rotatable">Game Dev</button>
         </div>
 
         <div id="projects">

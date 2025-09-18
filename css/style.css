@@ -83,6 +83,59 @@ body {
 }
 
 
+/* ------------------ */
+/*  Experience Rules  */
+/* ------------------ */
+
+#timeline {
+  display: flex;
+  gap: 10px;
+
+  position: relative;
+  height: 500px;
+}
+
+#timeline:before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  width: 100%;
+  height: 2px;
+  background: rgb(94, 61, 40) 
+}
+
+.timeline-event {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  padding: 5px;
+
+  background-color: rgb(221, 142, 142);
+  border-color: rgb(63, 26, 26);
+  border-style: solid;
+}
+
+.timeline-event:not(:last-child) { 
+  margin: 0 -50px 0 0;
+}
+
+/*  event in even position are bottom-aligned */
+.timeline-event:nth-child(2n),
+.timeline-event:nth-child(2n) div { align-self: flex-end;  }
+
+.timeline-event-info {
+  font-size: small;
+}
+
+#timeline .timeline-event-info { 
+  display: none; 
+}
+
+#timeline li:hover .timeline-event-info { 
+  display: block; 
+}
+
+
 /* --------------- */
 /*  Project Rules  */
 /* --------------- */
@@ -117,15 +170,13 @@ body {
   border-color: blue;
   border-style: solid;
 
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  transition: transform .2s;
+  scale: 1;
+  transition: scale .2s;
 }
 
 .project:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  transition: transform .2s;
+  scale: 1.1;
+  transition: scale .2s;
 
   filter: drop-shadow(0px 0px 5px #00000075);
   filter: brightness(110%);
@@ -139,6 +190,40 @@ body {
 }
 
 
+/* ------------- */
+/*  About Rules  */
+/* ------------- */
+
+#about-content {
+  display: flex;
+  padding: 16px;
+  gap: 10px;
+}
+
+#about-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#about-image {
+  text-align: center;
+  line-height: 400px;
+  width: 300px;
+
+  background: #685849;
+  color: antiquewhite;
+  border-color: rgb(107, 31, 12);
+  border-style: solid;
+}
+
+
 /* ------------ */
 /*  Misc Rules  */
 /* ------------ */
@@ -149,6 +234,10 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+time {
+  font-style:italic;
 }
 
 button {
